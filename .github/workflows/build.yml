@@ -1,16 +1,26 @@
 name: Build
-
-on: [push]
-
+on:
+  push:	
+    branches:	
+      - master
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Install Packages
+      uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: npm install
-    - run: npm run lint
+      run: npm install
+    - name: Lint
+      run: npm run lint
+    - name: Bundle
+      run: npm run bundle
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: dist # The folder the action should deploy.
