@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "bundle": "parcel build index.html",
+    "bundle": "parcel build index.html --public-url /react-demo/",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "husky": {
