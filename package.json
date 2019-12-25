@@ -2,6 +2,7 @@
   "name": "react-demo",
   "version": "1.0.0",
   "description": "react demo project with parcel",
+  "homepage": "https://dunmengjun.github.io/react-demo",
   "repository": {
     "type": "git",
     "url": "https://github.com/dunmengjun/react-demo.git"
