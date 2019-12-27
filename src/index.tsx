@@ -8,9 +8,23 @@ interface Props {
   value: number
 }
 
-class Square extends React.Component<Props, {}> {
+interface State {
+  value: string
+}
+
+class Square extends React.Component<Props, State> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      value: null,
+    }
+  }
   render() {
-    return <button className="square">{this.props.value}</button>
+    return (
+      <button className="square" onClick={() => this.setState({value: 'X'})}>
+        {this.state.value}
+      </button>
+    )
   }
 }
 
