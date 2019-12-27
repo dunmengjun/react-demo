@@ -1,11 +1,10 @@
 /** @format */
 
 import * as React from 'react'
-import ReactDOM from 'react-dom'
 import './index.css'
-import Square from './component/square'
+import Square from '../square'
 
-class Board extends React.Component {
+export default class Board extends React.Component {
   renderSquare(i: number) {
     return <Square value={i} />
   }
@@ -35,21 +34,3 @@ class Board extends React.Component {
     )
   }
 }
-
-class Game extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(<Game />, document.getElementById('root'))

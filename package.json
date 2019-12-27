@@ -25,8 +25,8 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "bundle": "parcel build index.html --public-url /react-parcel-demo/",
+    "start": "parcel src/index.html",
+    "bundle": "parcel build src/index.html --public-url /react-parcel-demo/",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "husky": {
