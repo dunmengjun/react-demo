@@ -3,30 +3,7 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-
-interface Props {
-  value: number
-}
-
-interface State {
-  value: string
-}
-
-class Square extends React.Component<Props, State> {
-  constructor(props) {
-    super(props)
-    this.state = {
-      value: null,
-    }
-  }
-  render() {
-    return (
-      <button className="square" onClick={() => this.setState({value: 'X'})}>
-        {this.state.value}
-      </button>
-    )
-  }
-}
+import Square from './component/square'
 
 class Board extends React.Component {
   renderSquare(i: number) {
