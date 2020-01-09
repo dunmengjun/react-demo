@@ -27,6 +27,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "bundle-for-github-page": "parcel build src/index.html --public-url /react-parcel-demo/ --out-dir build/github-page",
+    "bundle-for-docker": "parcel build src/index.html --out-dir build/docker",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "husky": {
