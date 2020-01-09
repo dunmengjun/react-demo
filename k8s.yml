@@ -26,6 +26,6 @@ spec:
   type: ClusterIP
   ports:
   - name: "react-parcel-demo"
-    port: 8080
+    port: 80
   selector:
     app: react-parcel-demo
